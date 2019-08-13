@@ -1,0 +1,24 @@
+Z:\BD\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.Properties.Resources.resources
+Z:\BD\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.UI.FrmLeitor.resources
+Z:\BD\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.UI.FrmLivro.resources
+Z:\BD\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.UI.FrmPrincipal.resources
+Z:\BD\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.csproj.GenerateResource.cache
+Z:\BD\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.csproj.CoreCompileInputs.cache
+Z:\BD\apBiblioteca\apBiblioteca\bin\Debug\apBiblioteca.exe.config
+Z:\BD\apBiblioteca\apBiblioteca\bin\Debug\apBiblioteca.exe
+Z:\BD\apBiblioteca\apBiblioteca\bin\Debug\apBiblioteca.pdb
+Z:\BD\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.exe
+Z:\BD\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.pdb
+Z:\BD\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.csprojResolveAssemblyReference.cache
+Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\bin\Debug\apBiblioteca.exe.config
+Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\bin\Debug\apBiblioteca.exe
+Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\bin\Debug\apBiblioteca.pdb
+Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.csprojResolveAssemblyReference.cache
+Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.Properties.Resources.resources
+Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.UI.FrmLeitor.resources
+Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.UI.FrmLivro.resources
+Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.UI.FrmPrincipal.resources
+Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.csproj.GenerateResource.Cache
+Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.csproj.CoreCompileInputs.cache
+Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.exe
+Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.pdb
