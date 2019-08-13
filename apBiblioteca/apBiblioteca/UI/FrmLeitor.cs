@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using apBiblioteca.BLL;
 
 namespace apBiblioteca.UI
 {
@@ -17,5 +18,18 @@ namespace apBiblioteca.UI
             InitializeComponent();
         }
 
+        private void btnNovoLeitor_Click(object sender, EventArgs e)
+        {
+            Leitor leitor = new Leitor(txtNomeLeitor.Text, txtTelLeitor.Text, txtEmailLeitor.Text, txtEnderecoLeitor.Text);
+            try
+            {
+                LeitorBLL leitorBLL = new LeitorBLL();
+                leitorBLL.IncluirLeitor(leitor);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex);
+            }
+        }
     }
 }

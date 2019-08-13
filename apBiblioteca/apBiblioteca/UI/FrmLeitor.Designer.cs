@@ -30,23 +30,23 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnExibir = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAlterarLeitor = new System.Windows.Forms.Button();
+            this.btnNovoLeitor = new System.Windows.Forms.Button();
+            this.btnProcurarLeitor = new System.Windows.Forms.Button();
+            this.txtEnderecoLeitor = new System.Windows.Forms.TextBox();
+            this.txtEmailLeitor = new System.Windows.Forms.TextBox();
+            this.txtTelLeitor = new System.Windows.Forms.TextBox();
+            this.txtNomeLeitor = new System.Windows.Forms.TextBox();
+            this.txtIdLeitor = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtIdLeitor = new System.Windows.Forms.TextBox();
-            this.txtNomeLeitor = new System.Windows.Forms.TextBox();
-            this.txtTelLeitor = new System.Windows.Forms.TextBox();
-            this.txtEmailLeitor = new System.Windows.Forms.TextBox();
-            this.txtEnderecoLeitor = new System.Windows.Forms.TextBox();
-            this.btnProcurarLeitor = new System.Windows.Forms.Button();
-            this.btnNovoLeitor = new System.Windows.Forms.Button();
-            this.btnAlterarLeitor = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnExibir = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +86,107 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnExibir
+            // 
+            this.btnExibir.Location = new System.Drawing.Point(317, 309);
+            this.btnExibir.Name = "btnExibir";
+            this.btnExibir.Size = new System.Drawing.Size(75, 23);
+            this.btnExibir.TabIndex = 15;
+            this.btnExibir.Text = "Exibir";
+            this.btnExibir.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(221, 309);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 14;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterarLeitor
+            // 
+            this.btnAlterarLeitor.Location = new System.Drawing.Point(126, 309);
+            this.btnAlterarLeitor.Name = "btnAlterarLeitor";
+            this.btnAlterarLeitor.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterarLeitor.TabIndex = 13;
+            this.btnAlterarLeitor.Text = "Alterar";
+            this.btnAlterarLeitor.UseVisualStyleBackColor = true;
+            // 
+            // btnNovoLeitor
+            // 
+            this.btnNovoLeitor.Location = new System.Drawing.Point(26, 309);
+            this.btnNovoLeitor.Name = "btnNovoLeitor";
+            this.btnNovoLeitor.Size = new System.Drawing.Size(75, 23);
+            this.btnNovoLeitor.TabIndex = 12;
+            this.btnNovoLeitor.Text = "Novo";
+            this.btnNovoLeitor.UseVisualStyleBackColor = true;
+            this.btnNovoLeitor.Click += new System.EventHandler(this.btnNovoLeitor_Click);
+            // 
+            // btnProcurarLeitor
+            // 
+            this.btnProcurarLeitor.Location = new System.Drawing.Point(317, 26);
+            this.btnProcurarLeitor.Name = "btnProcurarLeitor";
+            this.btnProcurarLeitor.Size = new System.Drawing.Size(75, 23);
+            this.btnProcurarLeitor.TabIndex = 11;
+            this.btnProcurarLeitor.Text = "Procurar";
+            this.btnProcurarLeitor.UseVisualStyleBackColor = true;
+            // 
+            // txtEnderecoLeitor
+            // 
+            this.txtEnderecoLeitor.Location = new System.Drawing.Point(161, 243);
+            this.txtEnderecoLeitor.Name = "txtEnderecoLeitor";
+            this.txtEnderecoLeitor.Size = new System.Drawing.Size(100, 20);
+            this.txtEnderecoLeitor.TabIndex = 10;
+            // 
+            // txtEmailLeitor
+            // 
+            this.txtEmailLeitor.Location = new System.Drawing.Point(161, 196);
+            this.txtEmailLeitor.Name = "txtEmailLeitor";
+            this.txtEmailLeitor.Size = new System.Drawing.Size(100, 20);
+            this.txtEmailLeitor.TabIndex = 9;
+            // 
+            // txtTelLeitor
+            // 
+            this.txtTelLeitor.Location = new System.Drawing.Point(161, 141);
+            this.txtTelLeitor.Name = "txtTelLeitor";
+            this.txtTelLeitor.Size = new System.Drawing.Size(100, 20);
+            this.txtTelLeitor.TabIndex = 8;
+            // 
+            // txtNomeLeitor
+            // 
+            this.txtNomeLeitor.Location = new System.Drawing.Point(161, 86);
+            this.txtNomeLeitor.Name = "txtNomeLeitor";
+            this.txtNomeLeitor.Size = new System.Drawing.Size(100, 20);
+            this.txtNomeLeitor.TabIndex = 7;
+            // 
+            // txtIdLeitor
+            // 
+            this.txtIdLeitor.Location = new System.Drawing.Point(161, 31);
+            this.txtIdLeitor.Name = "txtIdLeitor";
+            this.txtIdLeitor.Size = new System.Drawing.Size(100, 20);
+            this.txtIdLeitor.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(22, 243);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 20);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Endereço";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(22, 139);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 20);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Telefone";
             // 
             // label4
             // 
@@ -131,110 +232,10 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(481, 316);
+            this.tabPage2.Size = new System.Drawing.Size(451, 355);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lista";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 139);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Telefone";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 243);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 20);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Endereço";
-            // 
-            // txtIdLeitor
-            // 
-            this.txtIdLeitor.Location = new System.Drawing.Point(161, 31);
-            this.txtIdLeitor.Name = "txtIdLeitor";
-            this.txtIdLeitor.Size = new System.Drawing.Size(100, 20);
-            this.txtIdLeitor.TabIndex = 6;
-            // 
-            // txtNomeLeitor
-            // 
-            this.txtNomeLeitor.Location = new System.Drawing.Point(161, 86);
-            this.txtNomeLeitor.Name = "txtNomeLeitor";
-            this.txtNomeLeitor.Size = new System.Drawing.Size(100, 20);
-            this.txtNomeLeitor.TabIndex = 7;
-            // 
-            // txtTelLeitor
-            // 
-            this.txtTelLeitor.Location = new System.Drawing.Point(161, 141);
-            this.txtTelLeitor.Name = "txtTelLeitor";
-            this.txtTelLeitor.Size = new System.Drawing.Size(100, 20);
-            this.txtTelLeitor.TabIndex = 8;
-            // 
-            // txtEmailLeitor
-            // 
-            this.txtEmailLeitor.Location = new System.Drawing.Point(161, 196);
-            this.txtEmailLeitor.Name = "txtEmailLeitor";
-            this.txtEmailLeitor.Size = new System.Drawing.Size(100, 20);
-            this.txtEmailLeitor.TabIndex = 9;
-            // 
-            // txtEnderecoLeitor
-            // 
-            this.txtEnderecoLeitor.Location = new System.Drawing.Point(161, 243);
-            this.txtEnderecoLeitor.Name = "txtEnderecoLeitor";
-            this.txtEnderecoLeitor.Size = new System.Drawing.Size(100, 20);
-            this.txtEnderecoLeitor.TabIndex = 10;
-            // 
-            // btnProcurarLeitor
-            // 
-            this.btnProcurarLeitor.Location = new System.Drawing.Point(317, 26);
-            this.btnProcurarLeitor.Name = "btnProcurarLeitor";
-            this.btnProcurarLeitor.Size = new System.Drawing.Size(75, 23);
-            this.btnProcurarLeitor.TabIndex = 11;
-            this.btnProcurarLeitor.Text = "Procurar";
-            this.btnProcurarLeitor.UseVisualStyleBackColor = true;
-            // 
-            // btnNovoLeitor
-            // 
-            this.btnNovoLeitor.Location = new System.Drawing.Point(26, 309);
-            this.btnNovoLeitor.Name = "btnNovoLeitor";
-            this.btnNovoLeitor.Size = new System.Drawing.Size(75, 23);
-            this.btnNovoLeitor.TabIndex = 12;
-            this.btnNovoLeitor.Text = "Novo";
-            this.btnNovoLeitor.UseVisualStyleBackColor = true;
-            // 
-            // btnAlterarLeitor
-            // 
-            this.btnAlterarLeitor.Location = new System.Drawing.Point(126, 309);
-            this.btnAlterarLeitor.Name = "btnAlterarLeitor";
-            this.btnAlterarLeitor.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterarLeitor.TabIndex = 13;
-            this.btnAlterarLeitor.Text = "Alterar";
-            this.btnAlterarLeitor.UseVisualStyleBackColor = true;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Location = new System.Drawing.Point(221, 309);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 14;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnExibir
-            // 
-            this.btnExibir.Location = new System.Drawing.Point(317, 309);
-            this.btnExibir.Name = "btnExibir";
-            this.btnExibir.Size = new System.Drawing.Size(75, 23);
-            this.btnExibir.TabIndex = 15;
-            this.btnExibir.Text = "Exibir";
-            this.btnExibir.UseVisualStyleBackColor = true;
             // 
             // FrmLeitor
             // 
