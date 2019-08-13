@@ -40,7 +40,6 @@ namespace apBiblioteca.DAL
                             while (dr.Read())
                             {
                                 Leitor leitor = new Leitor(
-                                                  (int)dr["idLeitor"],
                                                   dr["nomeLeitor"] + "",
                                                   dr["telefoneLeitor"] + "",
                                                   dr["emailLeitor"] + "",
@@ -105,8 +104,7 @@ namespace apBiblioteca.DAL
                 Leitor leitor = null;
                 if (dr.Read())
                 {
-                    leitor = new Leitor(Convert.ToInt32(dr["idLeitor"]),
-                                       dr["nomeLeitor"].ToString(),
+                    leitor = new Leitor(dr["nomeLeitor"].ToString(),
                                        dr["telefoneLeitor"].ToString(),
                                        dr["emailLeitor"].ToString(),
                                        dr["enderecoLeitor"].ToString()
@@ -143,8 +141,7 @@ namespace apBiblioteca.DAL
                 Leitor leitor = null;
                 if (dr.Read())
                 {
-                    leitor = new Leitor(Convert.ToInt32(dr["idLeitor"]),
-                                       dr["nomeLeitor"].ToString(),
+                    leitor = new Leitor(dr["nomeLeitor"].ToString(),
                                        dr["telefoneLeitor"].ToString(),
                                        dr["emailLeitor"].ToString(),
                                        dr["enderecoLeitor"].ToString()
@@ -168,11 +165,10 @@ namespace apBiblioteca.DAL
             try
             {
                 String sql = "insert into BibLeitor " +
-                             "values(@id, @nome, @telefone, @email, @endereco)";
+                             "values(@nome, @telefone, @email, @endereco)";
 
                 conexao = new SqlConnection(_conexaoSQLServer);
                 SqlCommand cmd = new SqlCommand(sql, conexao);
-                cmd.Parameters.AddWithValue("@id", qualLeitor.IdLeitor);
                 cmd.Parameters.AddWithValue("@nome", qualLeitor.NomeLeitor);
                 cmd.Parameters.AddWithValue("@telefone", qualLeitor.TelefoneLeitor);
                 cmd.Parameters.AddWithValue("@email", qualLeitor.EmailLeitor);
