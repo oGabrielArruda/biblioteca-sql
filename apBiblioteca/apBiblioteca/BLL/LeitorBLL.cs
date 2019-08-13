@@ -122,8 +122,6 @@ namespace apBiblioteca.BLL
                 throw ex;
 
             }
-
-
         }
     }
 }
