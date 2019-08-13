@@ -187,7 +187,7 @@ namespace apBiblioteca.DAL
         }
 
         //Alterar livro
-        public void UpdateLeitor(Leitor qualLeitor)
+        public void UpdateLivro(Livro qualLivro)
         {
             try
             {
