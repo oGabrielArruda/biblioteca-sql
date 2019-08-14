@@ -47,8 +47,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgvLeitor = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLeitor)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -95,6 +98,7 @@
             this.btnExibir.TabIndex = 15;
             this.btnExibir.Text = "Exibir";
             this.btnExibir.UseVisualStyleBackColor = true;
+            this.btnExibir.Click += new System.EventHandler(this.btnExibir_Click);
             // 
             // btnExcluir
             // 
@@ -104,6 +108,7 @@
             this.btnExcluir.TabIndex = 14;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterarLeitor
             // 
@@ -113,6 +118,7 @@
             this.btnAlterarLeitor.TabIndex = 13;
             this.btnAlterarLeitor.Text = "Alterar";
             this.btnAlterarLeitor.UseVisualStyleBackColor = true;
+            this.btnAlterarLeitor.Click += new System.EventHandler(this.btnAlterarLeitor_Click);
             // 
             // btnNovoLeitor
             // 
@@ -132,6 +138,7 @@
             this.btnProcurarLeitor.TabIndex = 11;
             this.btnProcurarLeitor.Text = "Procurar";
             this.btnProcurarLeitor.UseVisualStyleBackColor = true;
+            this.btnProcurarLeitor.Click += new System.EventHandler(this.btnProcurarLeitor_Click);
             // 
             // txtEnderecoLeitor
             // 
@@ -229,6 +236,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dgvLeitor);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -236,6 +244,14 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lista";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dgvLeitor
+            // 
+            this.dgvLeitor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLeitor.Location = new System.Drawing.Point(24, 21);
+            this.dgvLeitor.Name = "dgvLeitor";
+            this.dgvLeitor.Size = new System.Drawing.Size(405, 328);
+            this.dgvLeitor.TabIndex = 0;
             // 
             // FrmLeitor
             // 
@@ -248,6 +264,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLeitor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,5 +291,6 @@
         private System.Windows.Forms.Button btnAlterarLeitor;
         private System.Windows.Forms.Button btnNovoLeitor;
         private System.Windows.Forms.Button btnProcurarLeitor;
+        private System.Windows.Forms.DataGridView dgvLeitor;
     }
 }

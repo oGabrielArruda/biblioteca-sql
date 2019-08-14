@@ -222,7 +222,7 @@ namespace apBiblioteca.DAL
         }
 
         //Excluir leitor
-        public void DeleteLeitor(Leitor qualLeitor)
+        public void DeleteLeitor(int id)
         {
 
             try
@@ -233,7 +233,7 @@ namespace apBiblioteca.DAL
 
                 conexao = new SqlConnection(_conexaoSQLServer);
                 SqlCommand cmd = new SqlCommand(sql, conexao);
-                cmd.Parameters.AddWithValue("@id", qualLeitor.IdLeitor);
+                cmd.Parameters.AddWithValue("@id", id);
                 conexao.Open();
                 cmd.ExecuteNonQuery();
             }

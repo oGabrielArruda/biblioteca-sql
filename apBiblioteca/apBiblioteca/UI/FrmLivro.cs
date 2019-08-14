@@ -125,7 +125,7 @@ namespace apBiblioteca.UI
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Erro: " + ex.Message.ToString());
             }
 
         }

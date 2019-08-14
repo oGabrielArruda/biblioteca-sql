@@ -22,3 +22,15 @@ Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\obj\Debug\apB
 Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.csproj.CoreCompileInputs.cache
 Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.exe
 Z:\Banco de Dados\sql com banco de dados\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.pdb
+C:\Users\u19170\Desktop\a\ProjetoBD_Bib\apBiblioteca\apBiblioteca\bin\Debug\apBiblioteca.exe.config
+C:\Users\u19170\Desktop\a\ProjetoBD_Bib\apBiblioteca\apBiblioteca\bin\Debug\apBiblioteca.exe
+C:\Users\u19170\Desktop\a\ProjetoBD_Bib\apBiblioteca\apBiblioteca\bin\Debug\apBiblioteca.pdb
+C:\Users\u19170\Desktop\a\ProjetoBD_Bib\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.csprojResolveAssemblyReference.cache
+C:\Users\u19170\Desktop\a\ProjetoBD_Bib\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.Properties.Resources.resources
+C:\Users\u19170\Desktop\a\ProjetoBD_Bib\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.UI.FrmLeitor.resources
+C:\Users\u19170\Desktop\a\ProjetoBD_Bib\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.UI.FrmLivro.resources
+C:\Users\u19170\Desktop\a\ProjetoBD_Bib\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.UI.FrmPrincipal.resources
+C:\Users\u19170\Desktop\a\ProjetoBD_Bib\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.csproj.GenerateResource.Cache
+C:\Users\u19170\Desktop\a\ProjetoBD_Bib\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.csproj.CoreCompileInputs.cache
+C:\Users\u19170\Desktop\a\ProjetoBD_Bib\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.exe
+C:\Users\u19170\Desktop\a\ProjetoBD_Bib\apBiblioteca\apBiblioteca\obj\Debug\apBiblioteca.pdb

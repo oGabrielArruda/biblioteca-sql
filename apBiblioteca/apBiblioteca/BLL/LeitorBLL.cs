@@ -92,7 +92,7 @@ namespace apBiblioteca.BLL
 
         }
 
-        public void AlterarLivro(Leitor leitor)
+        public void AlterarLeitor(Leitor leitor)
         {
             try
             {
@@ -109,12 +109,12 @@ namespace apBiblioteca.BLL
 
         }
 
-        public void ExcluirLeitor(Leitor leitor)
+        public void ExcluirLeitor(int id)
         {
             try
             {
                 dal = new DAL.LeitorDAL();
-                dal.DeleteLeitor(leitor);
+                dal.DeleteLeitor(id);
 
             }
             catch (Exception ex)
