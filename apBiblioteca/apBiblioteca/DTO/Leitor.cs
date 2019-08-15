@@ -41,8 +41,7 @@ namespace apBiblioteca
         {
             get { return nomeLeitor; }
             set {
-
-                value = value.Remove(tamanhoNome);
+                value = value.TrimEnd();
                 value = value.PadRight(tamanhoNome, ' ');
 
                 nomeLeitor = value;
@@ -54,8 +53,8 @@ namespace apBiblioteca
         public string TelefoneLeitor
         {
             get { return telefoneLeitor; }
-            set { 
-                value = value.Remove(tamanhoTelefone);
+            set {
+                value = value.TrimEnd();
                 value = value.PadRight(tamanhoTelefone, ' ');
 
                 telefoneLeitor = value;
@@ -67,9 +66,9 @@ namespace apBiblioteca
         public string EmailLeitor
         {
             get { return emailLeitor; }
-            set { 
+            set {
 
-                value = value.Remove(tamanhoEmail);
+                value = value.TrimEnd();
                 value = value.PadRight(tamanhoEmail, ' ');
 
                 emailLeitor = value;
@@ -81,8 +80,7 @@ namespace apBiblioteca
         {
             get { return enderecoLeitor; }
             set {
-
-                value = value.Remove(tamanhoEndereco);
+                value = value.TrimEnd();
                 value = value.PadRight(tamanhoEndereco, ' ');
 
                 enderecoLeitor = value;
