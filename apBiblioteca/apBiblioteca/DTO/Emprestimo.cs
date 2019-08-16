@@ -9,6 +9,15 @@ namespace apBiblioteca
     class Emprestimo
     {
 
+        public Emprestimo(int idLivro, int idLeitor, DateTime dataEmprestimo, DateTime dataDevolucaoPrevista, DateTime dataDevolucaoReal)
+        {
+            this.IdLivro = IdLivro;
+            this.IdLeitor = idLeitor;
+            this.DataEmprestimo = dataEmprestimo;
+            this.dataevolucaoPrevista = dataDevolucaoPrevista;
+            this.DataDevolucaoReal = dataDevolucaoReal;
+        }
+
         int idEmprestimo;
 
         public int IdEmprestimo

@@ -110,7 +110,7 @@ namespace apBiblioteca.BLL
         }
 
         public void ExcluirLivro(Livro livro)
-        {
+        {            
             try
             {
                 dal = new DAL.LivroDAL();
