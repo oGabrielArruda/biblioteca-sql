@@ -35,7 +35,12 @@ namespace apBiblioteca.DAL
                         {
                             while (dr.Read())
                             {
-                                Emprestimo emprestimo = new Emprestimo(...);
+                                Emprestimo emprestimo = new Emprestimo((int)dr["idLivro"],
+                                                                          (int)dr["idLeitor"],
+                                                                          (DateTime)dr["dataEmpresitmo"],
+                                                                          (DateTime)dr["dataDevolucaoPrevista"],
+                                                                          (DateTime)dr["dataDevolucaoReal"]
+                                    );
                                 listaEmprestimos.Add(emprestimo);
                             }
                             return listaEmprestimos;
@@ -51,6 +56,114 @@ namespace apBiblioteca.DAL
 
             }
 
+        }
+
+        public DataTable SelecionarEmprestimos()
+        {
+            try
+            {
+                String sql = "select * from BibEmprestimo";
+                conexao = new SqlConnection(_conexaoSQLServer);
+                SqlCommand cmd = new SqlCommand(sql, conexao);
+
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                return dt;
+
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Emprestimo SelectById(int id)
+        {
+            try
+            {
+                String sql = $"select * from BibEmprestimo where idEmprestimo=@id";
+                conexao = new SqlConnection(_conexaoSQLServer);
+                SqlCommand cmd = new SqlCommand(sql, conexao);
+                cmd.Parameters.AddWithValue("@id", id);
+                conexao.Open();
+                SqlDataReader dr;
+                dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                Emprestimo emprestimo = null;
+                if (dr.Read())
+                {
+                    emprestimo = new Emprestimo((int)dr["idLivro"],
+                                                (int)dr["idLeitor"],
+                                                (DateTime)dr["dataEmpresitmo"],
+                                                (DateTime)dr["dataDevolucaoPrevista"],
+                                                (DateTime)dr["dataDevolucaoReal"]
+                                        );
+                }
+                return emprestimo;
+
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Emprestimo SelecionarPorIdLivro(int id)
+        {
+            try
+            {
+                String sql = $"select * from BibEmprestimo where idLivro=@id";
+                conexao = new SqlConnection(_conexaoSQLServer);
+                SqlCommand cmd = new SqlCommand(sql, conexao);
+                cmd.Parameters.AddWithValue("@id", id);
+                conexao.Open();
+                SqlDataReader dr;
+                dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                Emprestimo emprestimo = null;
+                if (dr.Read())
+                {
+                    emprestimo = new Emprestimo((int)dr["idLivro"],
+                                                (int)dr["idLeitor"],
+                                                (DateTime)dr["dataEmpresitmo"],
+                                                (DateTime)dr["dataDevolucaoPrevista"],
+                                                (DateTime)dr["dataDevolucaoReal"]
+                                        );
+                }
+                return emprestimo;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void InsertEmprestimo(Emprestimo qualEmprestimo)
+        {
+            try
+            {
+                String sql = "insert into BibEmprestimo values(" +
+                             "@idLivro, @idLeitor, @dataEmprestimo, @dataDevolucaoPrevista, @dataDevolucaoReal)";
+                conexao = new SqlConnection(_conexaoSQLServer);
+                SqlCommand cmd = new SqlCommand(sql, conexao);
+                cmd.Parameters.AddWithValue("@idLivro", qualEmprestimo.IdLivro);
+                cmd.Parameters.AddWithValue("@idLeitor", qualEmprestimo.IdLeitor);
+                cmd.Parameters.AddWithValue("@dataEmprestimo", qualEmprestimo.DataEmprestimo);
+                cmd.Parameters.AddWithValue("@dataDevolucaoPrevista", qualEmprestimo.DataDevolucaoPrevista);
+                cmd.Parameters.AddWithValue("@dataDevolucaoReal", qualEmprestimo.DataDevolucaoReal);
+                conexao.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
     }
 }

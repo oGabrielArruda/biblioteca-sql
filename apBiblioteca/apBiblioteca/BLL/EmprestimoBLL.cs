@@ -10,6 +10,12 @@ namespace apBiblioteca.BLL
     class EmprestimoBLL
     {
         DAL.EmprestimoDAL dal = null;
+
+        public EmprestimoBLL()
+        {
+
+        }
+
         public List<Emprestimo> ListarEmprestimos()
         {
             try
@@ -23,6 +29,20 @@ namespace apBiblioteca.BLL
                 throw ex;
             }
 
+        }
+
+        public DataTable SelecionarLivros()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                dal = new DAL.EmprestimoDAL();
+                return dt = dal.SelecionarEmprestimos();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

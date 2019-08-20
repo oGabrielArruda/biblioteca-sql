@@ -45,8 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\EmprestimoBLL.cs" />
     <Compile Include="BLL\LeitorBLL.cs" />
     <Compile Include="BLL\LivroBLL.cs" />
+    <Compile Include="DAL\EmprestimoDAL.cs" />
     <Compile Include="DAL\LeitorDAL.cs" />
     <Compile Include="DAL\LivroDAL.cs" />
     <Compile Include="DTO\Emprestimo.cs" />
