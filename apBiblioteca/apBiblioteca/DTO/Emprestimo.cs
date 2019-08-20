@@ -51,12 +51,12 @@ namespace apBiblioteca
             set { dataEmprestimo = value; }
         }
 
-        DateTime dataevolucaoPrevista;
+        DateTime dataDevolucaoPrevista;
 
         public DateTime DataDevolucaoPrevista
         {
-            get { return dataevolucaoPrevista; }
-            set { dataevolucaoPrevista = value; }
+            get { return dataDevolucaoPrevista; }
+            set { dataDevolucaoPrevista = value; }
         }
 
         DateTime dataDevolucaoReal;

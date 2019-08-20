@@ -165,5 +165,58 @@ namespace apBiblioteca.DAL
                 conexao.Close();
             }
         }
+
+        public void UpdateEmprestimo(Emprestimo qualEmprestimo)
+        {
+            try
+            {
+                String sql = "update BibEmprestimo set idLivro=@idLivro"+
+                    "idLeitor=@idLeitor"+
+                    "dataEmprestimo=@dataEmprestimo"+
+                    "dataDevolucaoPrevista=@dataDevolucaoPrevista"+
+                    "dataDevolucaoReal=@dataDevolucaoReal"+
+                    "where idEmpresitmo = @id";
+                conexao = new SqlConnection(_conexaoSQLServer);
+                SqlCommand cmd = new SqlCommand(sql, conexao);
+                cmd.Parameters.AddWithValue("@idLivro", qualEmprestimo.IdLivro);
+                cmd.Parameters.AddWithValue("@idLeitor", qualEmprestimo.IdLeitor);
+                cmd.Parameters.AddWithValue("@dataEmprestimo", qualEmprestimo.DataEmprestimo);
+                cmd.Parameters.AddWithValue("@dataDevolucaoPrevista", qualEmprestimo.DataDevolucaoPrevista);
+                cmd.Parameters.AddWithValue("@dataDevolucaoReal", qualEmprestimo.DataDevolucaoReal);
+                cmd.Parameters.AddWithValue("@id", qualEmprestimo.IdEmprestimo);
+                conexao.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        public void DeleteEmprestimo(Emprestimo qualEmprestimo)
+        {
+            try
+            {
+                String sql = "Delete from BibEmprestimo where idEmprestimo=@id";
+                conexao = new SqlConnection(_conexaoSQLServer);
+                SqlCommand cmd = new SqlCommand(sql, conexao);
+
+                cmd.Parameters.AddWithValue("@id", qualEmprestimo.IdEmprestimo);
+                conexao.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
     }
 }

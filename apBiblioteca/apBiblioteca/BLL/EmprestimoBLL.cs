@@ -31,7 +31,7 @@ namespace apBiblioteca.BLL
 
         }
 
-        public DataTable SelecionarLivros()
+        public DataTable SelecionarEmprestimos()
         {
             DataTable dt = new DataTable();
             try
@@ -43,6 +43,9 @@ namespace apBiblioteca.BLL
             {
                 throw ex;
             }
+
         }
+
+
     }
 }
