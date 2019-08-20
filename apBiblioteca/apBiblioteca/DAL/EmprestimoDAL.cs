@@ -218,5 +218,18 @@ namespace apBiblioteca.DAL
                 conexao.Close();
             }
         }
+
+        public bool LeitorTemLivro(int id)
+        {
+            List<Emprestimo> lista = this.SelectListEmprestimos();
+            foreach (Emprestimo emp in lista)
+            {
+                if(emp.IdLeitor == id)
+                {
+                    return true;
+                }
+            }      
+                return false;            
+        }
     }
 }

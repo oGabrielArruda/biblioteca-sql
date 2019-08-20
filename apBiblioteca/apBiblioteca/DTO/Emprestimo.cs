@@ -14,7 +14,7 @@ namespace apBiblioteca
             this.IdLivro = IdLivro;
             this.IdLeitor = idLeitor;
             this.DataEmprestimo = dataEmprestimo;
-            this.dataevolucaoPrevista = dataDevolucaoPrevista;
+            this.dataDevolucaoPrevista = dataDevolucaoPrevista;
             this.DataDevolucaoReal = dataDevolucaoReal;
         }
 
@@ -66,9 +66,5 @@ namespace apBiblioteca
             get { return dataDevolucaoReal; }
             set { dataDevolucaoReal = value; }
         }
-
-
-
-
     }
 }

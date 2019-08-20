@@ -114,8 +114,13 @@ namespace apBiblioteca.BLL
             try
             {
                 dal = new DAL.LeitorDAL();
-                dal.DeleteLeitor(id);
 
+                DAL.EmprestimoDAL dalEmp = new DAL.EmprestimoDAL();
+
+                if (!dalEmp.LeitorTemLivro(id)) // se o leitor não tem livros emprestados
+                {
+                    dal.DeleteLeitor(id);                   
+                }
             }
             catch (Exception ex)
             {
