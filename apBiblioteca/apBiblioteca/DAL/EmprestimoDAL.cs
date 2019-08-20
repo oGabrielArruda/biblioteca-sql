@@ -231,5 +231,18 @@ namespace apBiblioteca.DAL
             }      
                 return false;            
         }
+
+        public bool LivroEmprestado(int id)
+        {
+            List<Emprestimo> lista = this.SelectListEmprestimos();
+            foreach(Emprestimo emp in lista)
+            {
+                if(emp.IdLivro == id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

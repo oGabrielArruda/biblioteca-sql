@@ -114,17 +114,17 @@ namespace apBiblioteca.BLL
             try
             {
                 dal = new DAL.LivroDAL();
-                dal.DeleteLivro(livro);
-
+                DAL.EmprestimoDAL empDal = new DAL.EmprestimoDAL();
+                if (!empDal.LivroEmprestado(livro.IdLivro))
+                {
+                    dal.DeleteLivro(livro);
+                }                
             }
             catch (Exception ex)
             {
                 throw ex;
 
             }
-
-
         }
-
     }
 }
