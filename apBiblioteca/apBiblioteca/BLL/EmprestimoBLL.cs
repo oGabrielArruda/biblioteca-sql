@@ -37,15 +37,78 @@ namespace apBiblioteca.BLL
             try
             {
                 dal = new DAL.EmprestimoDAL();
-                return dt = dal.SelecionarEmprestimos();
+                dt = dal.SelecionarEmprestimos();
             }
             catch(Exception ex)
             {
                 throw ex;
             }
-
+            return dt;
         }
 
+        public Emprestimo SelecionarEmprestimoPorId(int id)
+        {
+            try
+            {
+                dal = new DAL.EmprestimoDAL();
+                return dal.SelectById(id);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
 
+        public Emprestimo SelecionarEmprestimoPorIdLivro(int idLivro)
+        {
+            try
+            {
+                dal = new DAL.EmprestimoDAL();
+                return dal.SelecionarPorIdLivro(idLivro);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void IncluirEmprestimo(Emprestimo emprestimo)
+        {
+            try
+            {
+                dal = new DAL.EmprestimoDAL();
+                dal.InsertEmprestimo(emprestimo);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void AlterarEmprestimo(Emprestimo emprestimo)
+        {
+            try
+            {
+                dal = new DAL.EmprestimoDAL();
+                dal.UpdateEmprestimo(emprestimo);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void ExcluirEmprestimo(Emprestimo emprestimo)
+        {
+            try
+            {
+                dal = new DAL.EmprestimoDAL();
+                dal.DeleteEmprestimo(emprestimo);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
