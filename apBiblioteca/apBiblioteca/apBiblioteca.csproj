@@ -95,6 +95,9 @@
     <EmbeddedResource Include="UI\FrmLivro.resx">
       <DependentUpon>FrmLivro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmOperacoes.resx">
+      <DependentUpon>FrmOperacoes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
