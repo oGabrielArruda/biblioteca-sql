@@ -22,9 +22,9 @@ namespace apBiblioteca.UI
         {
             Emprestimo novoEmp = new Emprestimo(int.Parse(txtIdLivro.Text),
                                     int.Parse(txtIdLeitor.Text), 
-                                    Convert.ToDateTime(mtxtDataEmp.Text), 
-                                    Convert.ToDateTime(mtxtDataDev),
-                                    Convert.ToDateTime(""));
+                                    DateTime.Parse(mtxtDataEmp.Text),
+                                    DateTime.Parse(mtxtDataDev.Text),
+                                    DateTime.Parse(""));
             try
             {
                 EmprestimoBLL empBLL = new EmprestimoBLL();
@@ -52,7 +52,46 @@ namespace apBiblioteca.UI
                 empBLL.IncluirEmprestimo(empAlterado);
             }
             catch(Exception ex)
-            {s
+            {
+                MessageBox.Show("Erro: " + ex.Message.ToString());
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Emprestimo emp = null;
+            try
+            {
+                EmprestimoBLL empBll = new EmprestimoBLL();
+                emp = empBll.SelecionarEmprestimoPorId(int.Parse(txtIdEmprestimo.Text));
+                btnProcurar.PerformClick();
+                empBll.ExcluirEmprestimo(emp);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message.ToString());
+            }
+        }
+
+        private void btnExibir_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage3;
+        }
+
+        private void btnProcurar_Click(object sender, EventArgs e)
+        {
+            Emprestimo emp = null;
+            try
+            {
+                EmprestimoBLL bll = new EmprestimoBLL();
+                emp = bll.SelecionarEmprestimoPorId(int.Parse(txtIdEmprestimo.Text));
+                txtIdLeitor.Text = emp.IdLeitor.ToString();
+                txtIdLivro.Text = emp.IdLivro.ToString();
+                mtxtDataEmp.Text = emp.DataEmprestimo.ToString();
+                mtxtDataDev.Text = emp.DataDevolucaoPrevista.ToString();
+            }
+            catch(Exception ex)
+            {
                 MessageBox.Show("Erro: " + ex.Message.ToString());
             }
         }

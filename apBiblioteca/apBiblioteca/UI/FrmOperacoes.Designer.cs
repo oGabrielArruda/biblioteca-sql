@@ -99,6 +99,7 @@
             this.btnExibir.TabIndex = 17;
             this.btnExibir.Text = "Exibir";
             this.btnExibir.UseVisualStyleBackColor = true;
+            this.btnExibir.Click += new System.EventHandler(this.btnExibir_Click);
             // 
             // btnExcluir
             // 
@@ -108,6 +109,7 @@
             this.btnExcluir.TabIndex = 16;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -137,6 +139,7 @@
             this.btnProcurar.TabIndex = 13;
             this.btnProcurar.Text = "Procurar";
             this.btnProcurar.UseVisualStyleBackColor = true;
+            this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
             // mtxtDataDev
             // 
@@ -247,7 +250,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(138, 37);
+            this.label7.Location = new System.Drawing.Point(160, 30);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(275, 31);
             this.label7.TabIndex = 0;

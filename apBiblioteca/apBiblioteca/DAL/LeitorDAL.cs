@@ -16,7 +16,7 @@ namespace apBiblioteca.DAL
 
         public LeitorDAL()
         {
-            _conexaoSQLServer = "Data Source = regulus; Initial Catalog = BD19170; Persist Security Info = True; User ID = BD19170; Password=260104gj";
+            _conexaoSQLServer = "Data Source = regulus; Initial Catalog = BD19170; Persist Security Info = True; User ID = BD19170; Password=BD19170";
 
 
         }

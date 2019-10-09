@@ -16,7 +16,7 @@ namespace apBiblioteca.DAL
 
         public EmprestimoDAL()
         {
-            _conexaoSQLServer = "Data Source = regulus; Initial Catalog = BD19170; Persist Security Info = True; User ID = BD19170; Password=260104gj";
+            _conexaoSQLServer = "Data Source = regulus; Initial Catalog = BD19170; Persist Security Info = True; User ID = BD19170; Password=BD19170";
 
 
         }
@@ -226,7 +226,8 @@ namespace apBiblioteca.DAL
             {
                 if(emp.IdLeitor == id)
                 {
-                    return true;
+                    if(emp.DataDevolucaoReal != Convert.ToDateTime(""))
+                        return true;
                 }
             }      
                 return false;            
@@ -239,7 +240,8 @@ namespace apBiblioteca.DAL
             {
                 if(emp.IdLivro == id)
                 {
-                    return true;
+                    if(emp.DataDevolucaoReal != Convert.ToDateTime("")) // se ainda estiver exmprestado
+                      return true;
                 }
             }
             return false;
