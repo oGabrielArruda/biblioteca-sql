@@ -42,14 +42,12 @@ namespace apBiblioteca.UI
             Emprestimo empAlterado = new Emprestimo(int.Parse(txtIdEmprestimo.Text),
                 int.Parse(txtIdLeitor.Text),
                 Convert.ToDateTime(mtxtDataEmp.Text),
-                Convert.ToDateTime(mtxtDataDev.Text),
-                Convert.ToDateTime("")
-                );
+                Convert.ToDateTime(mtxtDataDev.Text));
 
             try
             {
                 EmprestimoBLL empBLL = new EmprestimoBLL();
-                empBLL.IncluirEmprestimo(empAlterado);
+                empBLL.AlterarEmprestimo(empAlterado);
             }
             catch(Exception ex)
             {
@@ -103,6 +101,30 @@ namespace apBiblioteca.UI
             txtIdLivro.Clear();
             mtxtDataDev.Clear();
             mtxtDataEmp.Clear();
+        }
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EmprestimoBLL bll = new EmprestimoBLL();
+                DataTable dt = bll.SelecionarEmprestimos();
+
+                    foreach (DataRow tableRow in dt.Rows)
+                    {
+                         Invoke(new AddRowHandler(AddRow), tableRow);
+                         Application.DoEvents();
+                    }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message.ToString());
+            }
+        }
+        private delegate void AddRowHandler(DataRow items);
+        private void AddRow(DataRow items)
+        {
+            dgvDados.Rows.Insert(0, items.ItemArray);
         }
     }
 }
