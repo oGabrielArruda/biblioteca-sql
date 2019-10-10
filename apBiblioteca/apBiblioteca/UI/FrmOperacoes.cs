@@ -21,10 +21,9 @@ namespace apBiblioteca.UI
         private void btnNovo_Click(object sender, EventArgs e)
         {
             Emprestimo novoEmp = new Emprestimo(int.Parse(txtIdLivro.Text),
-                                    int.Parse(txtIdLeitor.Text), 
+                                    int.Parse(txtIdLeitor.Text),
                                     DateTime.Parse(mtxtDataEmp.Text),
-                                    DateTime.Parse(mtxtDataDev.Text),
-                                    DateTime.Parse(""));
+                                    DateTime.Parse(mtxtDataDev.Text));
             try
             {
                 EmprestimoBLL empBLL = new EmprestimoBLL();

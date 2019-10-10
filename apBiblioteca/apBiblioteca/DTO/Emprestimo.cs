@@ -11,11 +11,19 @@ namespace apBiblioteca
 
         public Emprestimo(int idLivro, int idLeitor, DateTime dataEmprestimo, DateTime dataDevolucaoPrevista, DateTime dataDevolucaoReal)
         {
-            this.IdLivro = IdLivro;
+            this.IdLivro = idLivro;
             this.IdLeitor = idLeitor;
             this.DataEmprestimo = dataEmprestimo;
             this.dataDevolucaoPrevista = dataDevolucaoPrevista;
             this.DataDevolucaoReal = dataDevolucaoReal;
+        }
+
+        public Emprestimo(int idLivro, int idLeitor, DateTime dataEmprestimo, DateTime dataDevolucaoPrevista)
+        {
+            this.IdLivro = idLivro;
+            this.IdLeitor = idLeitor;
+            this.DataEmprestimo = dataEmprestimo;
+            this.dataDevolucaoPrevista = dataDevolucaoPrevista;
         }
 
         int idEmprestimo;

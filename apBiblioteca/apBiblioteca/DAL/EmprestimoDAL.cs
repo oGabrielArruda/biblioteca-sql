@@ -145,14 +145,13 @@ namespace apBiblioteca.DAL
             try
             {
                 String sql = "insert into BibEmprestimo values(" +
-                             "@idLivro, @idLeitor, @dataEmprestimo, @dataDevolucaoPrevista, @dataDevolucaoReal)";
+                             "@idLivro, @idLeitor, @dataEmprestimo, @dataDevolucaoPrevista, '')";
                 conexao = new SqlConnection(_conexaoSQLServer);
                 SqlCommand cmd = new SqlCommand(sql, conexao);
                 cmd.Parameters.AddWithValue("@idLivro", qualEmprestimo.IdLivro);
                 cmd.Parameters.AddWithValue("@idLeitor", qualEmprestimo.IdLeitor);
                 cmd.Parameters.AddWithValue("@dataEmprestimo", qualEmprestimo.DataEmprestimo);
                 cmd.Parameters.AddWithValue("@dataDevolucaoPrevista", qualEmprestimo.DataDevolucaoPrevista);
-                cmd.Parameters.AddWithValue("@dataDevolucaoReal", qualEmprestimo.DataDevolucaoReal);
                 conexao.Open();
                 cmd.ExecuteNonQuery();
             }
