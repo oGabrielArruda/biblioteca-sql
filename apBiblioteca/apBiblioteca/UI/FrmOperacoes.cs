@@ -28,7 +28,8 @@ namespace apBiblioteca.UI
             {
                 EmprestimoBLL empBLL = new EmprestimoBLL();
                 empBLL.IncluirEmprestimo(novoEmp);
-
+                MessageBox.Show("Empréstimo incluído com sucesso");
+                limparTela();
             }
             catch(Exception ex)
             {
@@ -93,6 +94,15 @@ namespace apBiblioteca.UI
             {
                 MessageBox.Show("Erro: " + ex.Message.ToString());
             }
+        }
+
+        private void limparTela()
+        {
+            txtIdEmprestimo.Clear();
+            txtIdLeitor.Clear();
+            txtIdLivro.Clear();
+            mtxtDataDev.Clear();
+            mtxtDataEmp.Clear();
         }
     }
 }
