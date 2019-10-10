@@ -107,23 +107,13 @@ namespace apBiblioteca.UI
             try
             {
                 EmprestimoBLL bll = new EmprestimoBLL();
-                DataTable dt = bll.SelecionarEmprestimos();
-
-                    foreach (DataRow tableRow in dt.Rows)
-                    {
-                         Invoke(new AddRowHandler(AddRow), tableRow);
-                         Application.DoEvents();
-                    }
+                dgvDados.DataSource = bll.SelecionarEmprestimos();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message.ToString());
             }
         }
-        private delegate void AddRowHandler(DataRow items);
-        private void AddRow(DataRow items)
-        {
-            dgvDados.Rows.Insert(0, items.ItemArray);
-        }
+
     }
 }

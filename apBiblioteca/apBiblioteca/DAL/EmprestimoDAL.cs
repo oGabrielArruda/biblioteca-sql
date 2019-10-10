@@ -114,7 +114,7 @@ namespace apBiblioteca.DAL
         {
             try
             {
-                String sql = $"select * from BibEmprestimo where idLivro=@id";
+                String sql = "select * from BibEmprestimo where idLivro=@id";
                 conexao = new SqlConnection(_conexaoSQLServer);
                 SqlCommand cmd = new SqlCommand(sql, conexao);
                 cmd.Parameters.AddWithValue("@id", id);

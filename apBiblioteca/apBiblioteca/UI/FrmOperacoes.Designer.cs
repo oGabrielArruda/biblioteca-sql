@@ -48,12 +48,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvDados = new System.Windows.Forms.DataGridView();
-            this.IdEmprestimo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idLivro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idLeitor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDev = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDevReal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -260,49 +254,10 @@
             // dgvDados
             // 
             this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdEmprestimo,
-            this.idLivro,
-            this.idLeitor,
-            this.dataEmp,
-            this.dataDev,
-            this.dataDevReal});
             this.dgvDados.Location = new System.Drawing.Point(16, 15);
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.Size = new System.Drawing.Size(577, 379);
             this.dgvDados.TabIndex = 0;
-            // 
-            // IdEmprestimo
-            // 
-            this.IdEmprestimo.HeaderText = "idEmprestimo";
-            this.IdEmprestimo.Name = "IdEmprestimo";
-            this.IdEmprestimo.Width = 50;
-            // 
-            // idLivro
-            // 
-            this.idLivro.HeaderText = "idLivro";
-            this.idLivro.Name = "idLivro";
-            this.idLivro.Width = 50;
-            // 
-            // idLeitor
-            // 
-            this.idLeitor.HeaderText = "idLeitor";
-            this.idLeitor.Name = "idLeitor";
-            // 
-            // dataEmp
-            // 
-            this.dataEmp.HeaderText = "dataEmp";
-            this.dataEmp.Name = "dataEmp";
-            // 
-            // dataDev
-            // 
-            this.dataDev.HeaderText = "Devolução Prevista para:";
-            this.dataDev.Name = "dataDev";
-            // 
-            // dataDevReal
-            // 
-            this.dataDevReal.HeaderText = "Data da devolução";
-            this.dataDevReal.Name = "dataDevReal";
             // 
             // FrmOperacoes
             // 
@@ -345,11 +300,5 @@
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvDados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdEmprestimo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idLivro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idLeitor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataEmp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataDev;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataDevReal;
     }
 }
