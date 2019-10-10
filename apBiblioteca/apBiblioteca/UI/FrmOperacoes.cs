@@ -39,7 +39,7 @@ namespace apBiblioteca.UI
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            Emprestimo empAlterado = new Emprestimo(int.Parse(txtIdEmprestimo.Text),
+            Emprestimo empAlterado = new Emprestimo(int.Parse(txtIdLeitor.Text),
                 int.Parse(txtIdLeitor.Text),
                 Convert.ToDateTime(mtxtDataEmp.Text),
                 Convert.ToDateTime(mtxtDataDev.Text));
@@ -61,7 +61,7 @@ namespace apBiblioteca.UI
             try
             {
                 EmprestimoBLL empBll = new EmprestimoBLL();
-                emp = empBll.SelecionarEmprestimoPorId(int.Parse(txtIdEmprestimo.Text));
+                emp = empBll.SelecionarEmprestimoPorIdLivro(int.Parse(txtIdLivro.Text));
                 btnProcurar.PerformClick();
                 empBll.ExcluirEmprestimo(emp);
             }
@@ -82,7 +82,7 @@ namespace apBiblioteca.UI
             try
             {
                 EmprestimoBLL bll = new EmprestimoBLL();
-                emp = bll.SelecionarEmprestimoPorId(int.Parse(txtIdEmprestimo.Text));
+                emp = bll.SelecionarEmprestimoPorIdLivro(int.Parse(txtIdLivro.Text));
                 txtIdLeitor.Text = emp.IdLeitor.ToString();
                 txtIdLivro.Text = emp.IdLivro.ToString();
                 mtxtDataEmp.Text = emp.DataEmprestimo.ToString();
@@ -96,7 +96,6 @@ namespace apBiblioteca.UI
 
         private void limparTela()
         {
-            txtIdEmprestimo.Clear();
             txtIdLeitor.Clear();
             txtIdLivro.Clear();
             mtxtDataDev.Clear();

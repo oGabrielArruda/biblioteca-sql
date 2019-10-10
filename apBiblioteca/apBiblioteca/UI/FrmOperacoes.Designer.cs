@@ -39,12 +39,10 @@
             this.mtxtDataEmp = new System.Windows.Forms.MaskedTextBox();
             this.txtIdLeitor = new System.Windows.Forms.TextBox();
             this.txtIdLivro = new System.Windows.Forms.TextBox();
-            this.txtIdEmprestimo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
@@ -86,12 +84,10 @@
             this.tabPage1.Controls.Add(this.mtxtDataEmp);
             this.tabPage1.Controls.Add(this.txtIdLeitor);
             this.tabPage1.Controls.Add(this.txtIdLivro);
-            this.tabPage1.Controls.Add(this.txtIdEmprestimo);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -143,7 +139,7 @@
             // 
             // btnProcurar
             // 
-            this.btnProcurar.Location = new System.Drawing.Point(330, 88);
+            this.btnProcurar.Location = new System.Drawing.Point(330, 90);
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(75, 23);
             this.btnProcurar.TabIndex = 13;
@@ -153,7 +149,7 @@
             // 
             // mtxtDataDev
             // 
-            this.mtxtDataDev.Location = new System.Drawing.Point(186, 262);
+            this.mtxtDataDev.Location = new System.Drawing.Point(186, 216);
             this.mtxtDataDev.Mask = "00/00/0000";
             this.mtxtDataDev.Name = "mtxtDataDev";
             this.mtxtDataDev.Size = new System.Drawing.Size(100, 20);
@@ -162,7 +158,7 @@
             // 
             // mtxtDataEmp
             // 
-            this.mtxtDataEmp.Location = new System.Drawing.Point(186, 216);
+            this.mtxtDataEmp.Location = new System.Drawing.Point(186, 175);
             this.mtxtDataEmp.Mask = "00/00/0000";
             this.mtxtDataEmp.Name = "mtxtDataEmp";
             this.mtxtDataEmp.Size = new System.Drawing.Size(100, 20);
@@ -171,29 +167,22 @@
             // 
             // txtIdLeitor
             // 
-            this.txtIdLeitor.Location = new System.Drawing.Point(186, 175);
+            this.txtIdLeitor.Location = new System.Drawing.Point(186, 133);
             this.txtIdLeitor.Name = "txtIdLeitor";
             this.txtIdLeitor.Size = new System.Drawing.Size(100, 20);
             this.txtIdLeitor.TabIndex = 8;
             // 
             // txtIdLivro
             // 
-            this.txtIdLivro.Location = new System.Drawing.Point(186, 128);
+            this.txtIdLivro.Location = new System.Drawing.Point(186, 92);
             this.txtIdLivro.Name = "txtIdLivro";
             this.txtIdLivro.Size = new System.Drawing.Size(100, 20);
             this.txtIdLivro.TabIndex = 7;
             // 
-            // txtIdEmprestimo
-            // 
-            this.txtIdEmprestimo.Location = new System.Drawing.Point(186, 90);
-            this.txtIdEmprestimo.Name = "txtIdEmprestimo";
-            this.txtIdEmprestimo.Size = new System.Drawing.Size(100, 20);
-            this.txtIdEmprestimo.TabIndex = 6;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(39, 265);
+            this.label6.Location = new System.Drawing.Point(39, 219);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 13);
             this.label6.TabIndex = 5;
@@ -202,7 +191,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 219);
+            this.label5.Location = new System.Drawing.Point(39, 178);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 13);
             this.label5.TabIndex = 4;
@@ -211,7 +200,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(39, 178);
+            this.label4.Location = new System.Drawing.Point(39, 136);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 3;
@@ -220,20 +209,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 131);
+            this.label3.Location = new System.Drawing.Point(39, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Id Livro";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Id Empréstimo";
             // 
             // label1
             // 
@@ -260,7 +240,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(160, 30);
+            this.label7.Location = new System.Drawing.Point(154, 24);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(275, 31);
             this.label7.TabIndex = 0;
@@ -352,12 +332,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox txtIdLeitor;
         private System.Windows.Forms.TextBox txtIdLivro;
-        private System.Windows.Forms.TextBox txtIdEmprestimo;
         private System.Windows.Forms.MaskedTextBox mtxtDataDev;
         private System.Windows.Forms.MaskedTextBox mtxtDataEmp;
         private System.Windows.Forms.Button btnExibir;
