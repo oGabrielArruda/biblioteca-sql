@@ -125,7 +125,8 @@ namespace apBiblioteca.DAL
                 Emprestimo emprestimo = null;
                 if (dr.Read())
                 {
-                    emprestimo = new Emprestimo((int)dr["idLivro"],
+                    emprestimo = new Emprestimo((int)dr["idEmprestimo"],
+                                                (int)dr["idLivro"],
                                                 (int)dr["idLeitor"],
                                                 (DateTime)dr["dataEmpresitmo"],
                                                 (DateTime)dr["dataDevolucaoPrevista"],
@@ -153,6 +154,7 @@ namespace apBiblioteca.DAL
                 cmd.Parameters.AddWithValue("@idLeitor", qualEmprestimo.IdLeitor);
                 cmd.Parameters.AddWithValue("@dataEmprestimo", qualEmprestimo.DataEmprestimo);
                 cmd.Parameters.AddWithValue("@dataDevolucaoPrevista", qualEmprestimo.DataDevolucaoPrevista);
+                cmd.Parameters.AddWithValue("@dataDevolucaoPrevista", qualEmprestimo.DataDevolucaoReal);
                 conexao.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -239,7 +241,7 @@ namespace apBiblioteca.DAL
             int qtd = 0;
             foreach(Emprestimo emp in lista)
             {
-                if(emp.IdLeitor == emp.IdLeitor && emp.DataDevolucaoReal != Convert.ToDateTime(""))
+                if(emp.IdLeitor == emp.IdLeitor && emp.DataDevolucaoReal != Convert.ToDateTime("01/01/1900"))
                 {
                     qtd++;
                     if (qtd == 5)
@@ -256,7 +258,7 @@ namespace apBiblioteca.DAL
             {
                 if(emp.IdLivro == id)
                 {
-                    if(emp.DataDevolucaoReal != Convert.ToDateTime("")) // se ainda estiver exmprestado
+                    if(emp.DataDevolucaoReal != Convert.ToDateTime("01/01/1900")) // se ainda estiver exmprestado
                       return true;
                 }
             }

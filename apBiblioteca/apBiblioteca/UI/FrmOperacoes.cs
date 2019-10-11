@@ -119,17 +119,36 @@ namespace apBiblioteca.UI
         {
             try
             {
-                if (txtId.Text == "")
+                if (txtId.Text.Trim() == "")
                     throw new Exception("Id vazio");
 
                 EmprestimoBLL bll = new EmprestimoBLL();
                 Emprestimo emp = bll.SelecionarEmprestimoPorIdLivro(int.Parse(txtId.Text));
 
-                emp.DataDevolucaoReal = DateTime.Now;
-                bll.AlterarEmprestimo(emp);
+                txtIdLeitorDev.Text = emp.IdLeitor.ToString();
+                txtDataDevPrev.Text = emp.DataDevolucaoPrevista.ToString();
+                txtDataEmpDev.Text = emp.DataEmprestimo.ToString();
+                
             }
             catch(Exception ex)
             {
+                MessageBox.Show("Erro: " + ex.Message.ToString());
+            }
+        }
+
+        private void btnDevolver_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtId.Text.Trim() == "")
+                    throw new Exception("id vazio");
+                EmprestimoBLL bll = new EmprestimoBLL();
+                Emprestimo emp = bll.SelecionarEmprestimoPorId(int.Parse(txtId.Text));
+
+                emp.DataDevolucaoReal = DateTime.Now;
+                bll.AlterarEmprestimo(emp);
+            }
+            catch(Exception ex){
                 MessageBox.Show("Erro: " + ex.Message.ToString());
             }
         }
