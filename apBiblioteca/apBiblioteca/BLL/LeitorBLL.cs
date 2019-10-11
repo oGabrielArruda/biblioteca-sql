@@ -117,10 +117,10 @@ namespace apBiblioteca.BLL
 
                 DAL.EmprestimoDAL dalEmp = new DAL.EmprestimoDAL();
 
-                if (!dalEmp.LeitorTemLivro(id)) // se o leitor não tem livros emprestados
-                {
-                    dal.DeleteLeitor(id);                   
-                }
+                if (dalEmp.LeitorTemLivro(id)) // se o leitor não tem livros emprestados
+                    throw new Exception("Leitor tem livros emprestados!");    
+                dal.DeleteLeitor(id);                   
+                
             }
             catch (Exception ex)
             {

@@ -38,7 +38,7 @@ namespace apBiblioteca.DAL
                                 Emprestimo emprestimo = new Emprestimo((int)dr["idEmprestimo"],
                                                                             (int)dr["idLivro"],
                                                                           (int)dr["idLeitor"],
-                                                                          (DateTime)dr["dataEmpresitmo"],
+                                                                          (DateTime)dr["dataEmprestimo"],
                                                                           (DateTime)dr["dataDevolucaoPrevista"],
                                                                           (DateTime)dr["dataDevolucaoReal"]
                                     );
@@ -97,7 +97,7 @@ namespace apBiblioteca.DAL
                 {
                     emprestimo = new Emprestimo((int)dr["idLivro"],
                                                 (int)dr["idLeitor"],
-                                                (DateTime)dr["dataEmpresitmo"],
+                                                (DateTime)dr["dataEmprestimo"],
                                                 (DateTime)dr["dataDevolucaoPrevista"],
                                                 (DateTime)dr["dataDevolucaoReal"]
                                         );
@@ -128,7 +128,7 @@ namespace apBiblioteca.DAL
                     emprestimo = new Emprestimo((int)dr["idEmprestimo"],
                                                 (int)dr["idLivro"],
                                                 (int)dr["idLeitor"],
-                                                (DateTime)dr["dataEmpresitmo"],
+                                                (DateTime)dr["dataEmprestimo"],
                                                 (DateTime)dr["dataDevolucaoPrevista"],
                                                 (DateTime)dr["dataDevolucaoReal"]
                                         );
@@ -228,7 +228,7 @@ namespace apBiblioteca.DAL
             {
                 if(emp.IdLeitor == id)
                 {
-                    if(emp.DataDevolucaoReal != Convert.ToDateTime(""))
+                    if(emp.DataDevolucaoReal == Convert.ToDateTime("01/01/1900"))
                         return true;
                 }
             }      
@@ -241,7 +241,7 @@ namespace apBiblioteca.DAL
             int qtd = 0;
             foreach(Emprestimo emp in lista)
             {
-                if(emp.IdLeitor == emp.IdLeitor && emp.DataDevolucaoReal != Convert.ToDateTime("01/01/1900"))
+                if(emp.IdLeitor == emp.IdLeitor && emp.DataDevolucaoReal == Convert.ToDateTime("01/01/1900"))
                 {
                     qtd++;
                     if (qtd == 5)
@@ -258,7 +258,7 @@ namespace apBiblioteca.DAL
             {
                 if(emp.IdLivro == id)
                 {
-                    if(emp.DataDevolucaoReal != Convert.ToDateTime("01/01/1900")) // se ainda estiver exmprestado
+                    if(emp.DataDevolucaoReal == Convert.ToDateTime("01/01/1900")) // se ainda estiver exmprestado
                       return true;
                 }
             }
