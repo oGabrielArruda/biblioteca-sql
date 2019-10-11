@@ -21,7 +21,7 @@ namespace apBiblioteca.DAL
 
         }
 
-        public List<Emprestimo> SelectListEmprestimos()
+        public List<Emprestimo> SelectListEmprestimos() // o pai dos erros
         {
             try
             {
@@ -35,7 +35,8 @@ namespace apBiblioteca.DAL
                         {
                             while (dr.Read())
                             {
-                                Emprestimo emprestimo = new Emprestimo((int)dr["idLivro"],
+                                Emprestimo emprestimo = new Emprestimo((int)dr["idEmprestimo"],
+                                                                            (int)dr["idLivro"],
                                                                           (int)dr["idLeitor"],
                                                                           (DateTime)dr["dataEmpresitmo"],
                                                                           (DateTime)dr["dataDevolucaoPrevista"],
@@ -218,7 +219,7 @@ namespace apBiblioteca.DAL
             }
         }
 
-        public bool LeitorTemLivro(int id)
+        public bool LeitorTemLivro(int id) // verifica se o leitor tem livro emprestado
         {
             List<Emprestimo> lista = this.SelectListEmprestimos();
             foreach (Emprestimo emp in lista)
@@ -232,7 +233,23 @@ namespace apBiblioteca.DAL
                 return false;            
         }
 
-        public bool LivroEmprestado(int id)
+        public bool LeitorCheio(int id) // verifica se o leitor ja tem 5 livros
+        {
+            List<Emprestimo> lista = this.SelectListEmprestimos();
+            int qtd = 0;
+            foreach(Emprestimo emp in lista)
+            {
+                if(emp.IdLeitor == emp.IdLeitor && emp.DataDevolucaoReal != Convert.ToDateTime(""))
+                {
+                    qtd++;
+                    if (qtd == 5)
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        public bool LivroEmprestado(int id) // verifica se o livro está emprestado
         {
             List<Emprestimo> lista = this.SelectListEmprestimos();
             foreach(Emprestimo emp in lista)

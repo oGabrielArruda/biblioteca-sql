@@ -77,7 +77,7 @@ namespace apBiblioteca.BLL
             try
             {
                 dal = new DAL.EmprestimoDAL();
-                if(!dal.LivroEmprestado(emprestimo.IdLivro))
+                if(!dal.LivroEmprestado(emprestimo.IdLivro) && !dal.LeitorCheio(emprestimo.IdLeitor))
                     dal.InsertEmprestimo(emprestimo);
             }
             catch(Exception ex)

@@ -45,9 +45,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvDados = new System.Windows.Forms.DataGridView();
+            this.txtIdLeitorDev = new System.Windows.Forms.TextBox();
+            this.txtDataEmpDev = new System.Windows.Forms.TextBox();
+            this.txtDataDevPrev = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnDevolver = new System.Windows.Forms.Button();
+            this.btnProcurarDev = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -221,6 +231,16 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnProcurarDev);
+            this.tabPage2.Controls.Add(this.btnDevolver);
+            this.tabPage2.Controls.Add(this.label10);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.txtDataDevPrev);
+            this.tabPage2.Controls.Add(this.txtDataEmpDev);
+            this.tabPage2.Controls.Add(this.txtIdLeitorDev);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.txtId);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -229,6 +249,22 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Devoluções";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(90, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Id Livro";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(222, 117);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 1;
             // 
             // label7
             // 
@@ -258,6 +294,76 @@
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.Size = new System.Drawing.Size(577, 379);
             this.dgvDados.TabIndex = 0;
+            // 
+            // txtIdLeitorDev
+            // 
+            this.txtIdLeitorDev.Location = new System.Drawing.Point(222, 169);
+            this.txtIdLeitorDev.Name = "txtIdLeitorDev";
+            this.txtIdLeitorDev.ReadOnly = true;
+            this.txtIdLeitorDev.Size = new System.Drawing.Size(100, 20);
+            this.txtIdLeitorDev.TabIndex = 3;
+            // 
+            // txtDataEmpDev
+            // 
+            this.txtDataEmpDev.Location = new System.Drawing.Point(222, 222);
+            this.txtDataEmpDev.Name = "txtDataEmpDev";
+            this.txtDataEmpDev.ReadOnly = true;
+            this.txtDataEmpDev.Size = new System.Drawing.Size(100, 20);
+            this.txtDataEmpDev.TabIndex = 4;
+            // 
+            // txtDataDevPrev
+            // 
+            this.txtDataDevPrev.Location = new System.Drawing.Point(222, 268);
+            this.txtDataDevPrev.Name = "txtDataDevPrev";
+            this.txtDataDevPrev.ReadOnly = true;
+            this.txtDataDevPrev.Size = new System.Drawing.Size(100, 20);
+            this.txtDataDevPrev.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(90, 172);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Id Leitor";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(87, 225);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 13);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Data Empréstimo";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(87, 275);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(126, 13);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Data Devolução Prevista";
+            // 
+            // btnDevolver
+            // 
+            this.btnDevolver.Location = new System.Drawing.Point(222, 312);
+            this.btnDevolver.Name = "btnDevolver";
+            this.btnDevolver.Size = new System.Drawing.Size(75, 23);
+            this.btnDevolver.TabIndex = 9;
+            this.btnDevolver.Text = "Devolver";
+            this.btnDevolver.UseVisualStyleBackColor = true;
+            // 
+            // btnProcurarDev
+            // 
+            this.btnProcurarDev.Location = new System.Drawing.Point(354, 115);
+            this.btnProcurarDev.Name = "btnProcurarDev";
+            this.btnProcurarDev.Size = new System.Drawing.Size(75, 23);
+            this.btnProcurarDev.TabIndex = 10;
+            this.btnProcurarDev.Text = "Procurar";
+            this.btnProcurarDev.UseVisualStyleBackColor = true;
+            this.btnProcurarDev.Click += new System.EventHandler(this.btnProcurarDev_Click);
             // 
             // FrmOperacoes
             // 
@@ -300,5 +406,15 @@
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvDados;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnProcurarDev;
+        private System.Windows.Forms.Button btnDevolver;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtDataDevPrev;
+        private System.Windows.Forms.TextBox txtDataEmpDev;
+        private System.Windows.Forms.TextBox txtIdLeitorDev;
     }
 }

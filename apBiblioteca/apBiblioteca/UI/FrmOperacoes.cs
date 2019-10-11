@@ -115,5 +115,23 @@ namespace apBiblioteca.UI
             }
         }
 
+        private void btnProcurarDev_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtId.Text == "")
+                    throw new Exception("Id vazio");
+
+                EmprestimoBLL bll = new EmprestimoBLL();
+                Emprestimo emp = bll.SelecionarEmprestimoPorIdLivro(int.Parse(txtId.Text));
+
+                emp.DataDevolucaoReal = DateTime.Now;
+                bll.AlterarEmprestimo(emp);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message.ToString());
+            }
+        }
     }
 }
