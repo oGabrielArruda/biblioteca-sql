@@ -16,7 +16,7 @@ namespace apBiblioteca.DAL
 
         public EmprestimoDAL()
         {
-            _conexaoSQLServer = "Data Source = regulus; Initial Catalog = BD19170; Persist Security Info = True; User ID = BD19170; Password=BD19170";
+            _conexaoSQLServer = "Data Source = regulus.cotuca.unicamp.br; Initial Catalog = BD19170; Persist Security Info = True; User ID = BD19170; Password=BD19170";
 
 
         }
@@ -95,7 +95,8 @@ namespace apBiblioteca.DAL
                 Emprestimo emprestimo = null;
                 if (dr.Read())
                 {
-                    emprestimo = new Emprestimo((int)dr["idLivro"],
+                    emprestimo = new Emprestimo((int)dr["idEmprestimo"],
+                                                (int)dr["idLivro"],
                                                 (int)dr["idLeitor"],
                                                 (DateTime)dr["dataEmprestimo"],
                                                 (DateTime)dr["dataDevolucaoPrevista"],
@@ -172,12 +173,12 @@ namespace apBiblioteca.DAL
         {
             try
             {
-                String sql = "update BibEmprestimo set idLivro=@idLivro"+
-                    "idLeitor=@idLeitor"+
-                    "dataEmprestimo=@dataEmprestimo"+
-                    "dataDevolucaoPrevista=@dataDevolucaoPrevista"+
-                    "dataDevolucaoReal=@dataDevolucaoReal"+
-                    "where idEmpresitmo = @id";
+                String sql = "update BibEmprestimo set idLivro=@idLivro,"+
+                    "idLeitor=@idLeitor,"+
+                    "dataEmprestimo=@dataEmprestimo,"+
+                    "dataDevolucaoPrevista=@dataDevolucaoPrevista,"+
+                    "dataDevolucaoReal=@dataDevolucaoReal "+
+                    "where idEmprestimo = @id";
                 conexao = new SqlConnection(_conexaoSQLServer);
                 SqlCommand cmd = new SqlCommand(sql, conexao);
                 cmd.Parameters.AddWithValue("@idLivro", qualEmprestimo.IdLivro);
@@ -223,13 +224,13 @@ namespace apBiblioteca.DAL
 
         public bool LeitorTemLivro(int id) // verifica se o leitor tem livro emprestado
         {
-            List<Emprestimo> lista = this.SelectListEmprestimos();
-            foreach (Emprestimo emp in lista)
+            List<Emprestimo> lista = this.SelectListEmprestimos(); // lista com todos emprestimo
+            foreach (Emprestimo emp in lista) // pra cada item da lista
             {
-                if(emp.IdLeitor == id)
+                if(emp.IdLeitor == id) // se for um emprestimo do respectivo leitor
                 {
-                    if(emp.DataDevolucaoReal == Convert.ToDateTime("01/01/1900"))
-                        return true;
+                    if(emp.DataDevolucaoReal == Convert.ToDateTime("01/01/1900")) // se o livro não foi devolvido
+                        return true; // retorna se verdadeiro, ou seja, o leitor tem livro emprestados
                 }
             }      
                 return false;            
@@ -237,15 +238,16 @@ namespace apBiblioteca.DAL
 
         public bool LeitorCheio(int id) // verifica se o leitor ja tem 5 livros
         {
-            List<Emprestimo> lista = this.SelectListEmprestimos();
+            List<Emprestimo> lista = this.SelectListEmprestimos(); // lista com todos emprestimos
             int qtd = 0;
-            foreach(Emprestimo emp in lista)
+            foreach(Emprestimo emp in lista) // pra cada item da lista
             {
-                if(emp.IdLeitor == emp.IdLeitor && emp.DataDevolucaoReal == Convert.ToDateTime("01/01/1900"))
+                if(emp.IdLeitor == emp.IdLeitor // se for o leitor desejado
+                    && emp.DataDevolucaoReal == Convert.ToDateTime("01/01/1900")) // e se o livro não foi devolvido
                 {
-                    qtd++;
-                    if (qtd == 5)
-                        return true;
+                    qtd++; // soma-se 1 na qtd de livros emprestados
+                    if (qtd == 5) // se o leitor tiver 5 livros emprestados 
+                        return true; // ele já tem seu máximo então retorna-se true
                 }
             }
             return false;
@@ -253,12 +255,12 @@ namespace apBiblioteca.DAL
 
         public bool LivroEmprestado(int id) // verifica se o livro está emprestado
         {
-            List<Emprestimo> lista = this.SelectListEmprestimos();
-            foreach(Emprestimo emp in lista)
+            List<Emprestimo> lista = this.SelectListEmprestimos(); // lista com todos emprestimo
+            foreach (Emprestimo emp in lista) // pra cada item da lista
             {
-                if(emp.IdLivro == id)
+                if(emp.IdLivro == id) // se for o leitor desejado
                 {
-                    if(emp.DataDevolucaoReal == Convert.ToDateTime("01/01/1900")) // se ainda estiver exmprestado
+                    if(emp.DataDevolucaoReal == Convert.ToDateTime("01/01/1900")) // se ainda estiver emprestado
                       return true;
                 }
             }

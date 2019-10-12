@@ -10,11 +10,11 @@ namespace apBiblioteca
     {
         public Emprestimo(int idEmprestimo, int idLivro, int idLeitor, DateTime dataEmprestimo, DateTime dataDevolucaoPrevista, DateTime dataDevolucaoReal)
         {
-            this.idEmprestimo = idEmprestimo;
+            this.IdEmprestimo = idEmprestimo;
             this.IdLivro = idLivro;
             this.IdLeitor = idLeitor;
             this.DataEmprestimo = dataEmprestimo;
-            this.dataDevolucaoPrevista = dataDevolucaoPrevista;
+            this.DataDevolucaoPrevista = dataDevolucaoPrevista;
             this.DataDevolucaoReal = dataDevolucaoReal;
         }
         public Emprestimo(int idLivro, int idLeitor, DateTime dataEmprestimo, DateTime dataDevolucaoPrevista, DateTime dataDevolucaoReal)
@@ -22,7 +22,7 @@ namespace apBiblioteca
             this.IdLivro = idLivro;
             this.IdLeitor = idLeitor;
             this.DataEmprestimo = dataEmprestimo;
-            this.dataDevolucaoPrevista = dataDevolucaoPrevista;
+            this.DataDevolucaoPrevista = dataDevolucaoPrevista;
             this.DataDevolucaoReal = dataDevolucaoReal;
         }
 
@@ -31,7 +31,7 @@ namespace apBiblioteca
             this.IdLivro = idLivro;
             this.IdLeitor = idLeitor;
             this.DataEmprestimo = dataEmprestimo;
-            this.dataDevolucaoPrevista = dataDevolucaoPrevista;
+            this.DataDevolucaoPrevista = dataDevolucaoPrevista;
         }
 
         int idEmprestimo;

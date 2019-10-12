@@ -45,6 +45,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.btnProcurarDev = new System.Windows.Forms.Button();
             this.btnDevolver = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -54,10 +56,14 @@
             this.txtDataEmpDev = new System.Windows.Forms.TextBox();
             this.txtIdLeitorDev = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtIdLivroDev = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvDados = new System.Windows.Forms.DataGridView();
+            this.txtIdEmp = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.chkDev = new System.Windows.Forms.CheckBox();
+            this.chkDevolvido = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -79,6 +85,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.chkDev);
+            this.tabPage1.Controls.Add(this.txtIdEmp);
+            this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.btnExibir);
             this.tabPage1.Controls.Add(this.btnExcluir);
             this.tabPage1.Controls.Add(this.btnAlterar);
@@ -103,7 +112,7 @@
             // 
             // btnExibir
             // 
-            this.btnExibir.Location = new System.Drawing.Point(330, 324);
+            this.btnExibir.Location = new System.Drawing.Point(354, 354);
             this.btnExibir.Name = "btnExibir";
             this.btnExibir.Size = new System.Drawing.Size(75, 23);
             this.btnExibir.TabIndex = 17;
@@ -113,7 +122,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(237, 324);
+            this.btnExcluir.Location = new System.Drawing.Point(249, 354);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 16;
@@ -123,7 +132,7 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(139, 324);
+            this.btnAlterar.Location = new System.Drawing.Point(146, 354);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(75, 23);
             this.btnAlterar.TabIndex = 15;
@@ -133,7 +142,7 @@
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(42, 324);
+            this.btnNovo.Location = new System.Drawing.Point(40, 354);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 23);
             this.btnNovo.TabIndex = 14;
@@ -153,7 +162,7 @@
             // 
             // mtxtDataDev
             // 
-            this.mtxtDataDev.Location = new System.Drawing.Point(186, 216);
+            this.mtxtDataDev.Location = new System.Drawing.Point(189, 255);
             this.mtxtDataDev.Mask = "00/00/0000";
             this.mtxtDataDev.Name = "mtxtDataDev";
             this.mtxtDataDev.Size = new System.Drawing.Size(100, 20);
@@ -162,7 +171,7 @@
             // 
             // mtxtDataEmp
             // 
-            this.mtxtDataEmp.Location = new System.Drawing.Point(186, 175);
+            this.mtxtDataEmp.Location = new System.Drawing.Point(189, 214);
             this.mtxtDataEmp.Mask = "00/00/0000";
             this.mtxtDataEmp.Name = "mtxtDataEmp";
             this.mtxtDataEmp.Size = new System.Drawing.Size(100, 20);
@@ -171,14 +180,14 @@
             // 
             // txtIdLeitor
             // 
-            this.txtIdLeitor.Location = new System.Drawing.Point(186, 133);
+            this.txtIdLeitor.Location = new System.Drawing.Point(189, 172);
             this.txtIdLeitor.Name = "txtIdLeitor";
             this.txtIdLeitor.Size = new System.Drawing.Size(100, 20);
             this.txtIdLeitor.TabIndex = 8;
             // 
             // txtIdLivro
             // 
-            this.txtIdLivro.Location = new System.Drawing.Point(186, 92);
+            this.txtIdLivro.Location = new System.Drawing.Point(189, 131);
             this.txtIdLivro.Name = "txtIdLivro";
             this.txtIdLivro.Size = new System.Drawing.Size(100, 20);
             this.txtIdLivro.TabIndex = 7;
@@ -186,7 +195,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(39, 219);
+            this.label6.Location = new System.Drawing.Point(42, 258);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 13);
             this.label6.TabIndex = 5;
@@ -195,7 +204,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 178);
+            this.label5.Location = new System.Drawing.Point(42, 217);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 13);
             this.label5.TabIndex = 4;
@@ -204,7 +213,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(39, 136);
+            this.label4.Location = new System.Drawing.Point(42, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 3;
@@ -213,7 +222,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 95);
+            this.label3.Location = new System.Drawing.Point(42, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 2;
@@ -231,6 +240,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.chkDevolvido);
+            this.tabPage2.Controls.Add(this.txtId);
+            this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.btnProcurarDev);
             this.tabPage2.Controls.Add(this.btnDevolver);
             this.tabPage2.Controls.Add(this.label10);
@@ -240,7 +252,7 @@
             this.tabPage2.Controls.Add(this.txtDataEmpDev);
             this.tabPage2.Controls.Add(this.txtIdLeitorDev);
             this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.txtId);
+            this.tabPage2.Controls.Add(this.txtIdLivroDev);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -250,9 +262,25 @@
             this.tabPage2.Text = "Devoluções";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(222, 108);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 12;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(87, 111);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 13);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Id Emprestimo";
+            // 
             // btnProcurarDev
             // 
-            this.btnProcurarDev.Location = new System.Drawing.Point(354, 115);
+            this.btnProcurarDev.Location = new System.Drawing.Point(354, 105);
             this.btnProcurarDev.Name = "btnProcurarDev";
             this.btnProcurarDev.Size = new System.Drawing.Size(75, 23);
             this.btnProcurarDev.TabIndex = 10;
@@ -262,7 +290,7 @@
             // 
             // btnDevolver
             // 
-            this.btnDevolver.Location = new System.Drawing.Point(222, 315);
+            this.btnDevolver.Location = new System.Drawing.Point(232, 371);
             this.btnDevolver.Name = "btnDevolver";
             this.btnDevolver.Size = new System.Drawing.Size(75, 23);
             this.btnDevolver.TabIndex = 9;
@@ -273,7 +301,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(87, 275);
+            this.label10.Location = new System.Drawing.Point(87, 286);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(126, 13);
             this.label10.TabIndex = 8;
@@ -282,7 +310,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(87, 225);
+            this.label9.Location = new System.Drawing.Point(87, 243);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 13);
             this.label9.TabIndex = 7;
@@ -291,7 +319,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(90, 172);
+            this.label8.Location = new System.Drawing.Point(87, 199);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 13);
             this.label8.TabIndex = 6;
@@ -299,7 +327,7 @@
             // 
             // txtDataDevPrev
             // 
-            this.txtDataDevPrev.Location = new System.Drawing.Point(222, 268);
+            this.txtDataDevPrev.Location = new System.Drawing.Point(222, 283);
             this.txtDataDevPrev.Name = "txtDataDevPrev";
             this.txtDataDevPrev.ReadOnly = true;
             this.txtDataDevPrev.Size = new System.Drawing.Size(100, 20);
@@ -307,7 +335,7 @@
             // 
             // txtDataEmpDev
             // 
-            this.txtDataEmpDev.Location = new System.Drawing.Point(222, 222);
+            this.txtDataEmpDev.Location = new System.Drawing.Point(222, 240);
             this.txtDataEmpDev.Name = "txtDataEmpDev";
             this.txtDataEmpDev.ReadOnly = true;
             this.txtDataEmpDev.Size = new System.Drawing.Size(100, 20);
@@ -315,7 +343,7 @@
             // 
             // txtIdLeitorDev
             // 
-            this.txtIdLeitorDev.Location = new System.Drawing.Point(222, 169);
+            this.txtIdLeitorDev.Location = new System.Drawing.Point(222, 196);
             this.txtIdLeitorDev.Name = "txtIdLeitorDev";
             this.txtIdLeitorDev.ReadOnly = true;
             this.txtIdLeitorDev.Size = new System.Drawing.Size(100, 20);
@@ -324,18 +352,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(90, 120);
+            this.label2.Location = new System.Drawing.Point(87, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Id Livro";
             // 
-            // txtId
+            // txtIdLivroDev
             // 
-            this.txtId.Location = new System.Drawing.Point(222, 117);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 20);
-            this.txtId.TabIndex = 1;
+            this.txtIdLivroDev.Location = new System.Drawing.Point(222, 157);
+            this.txtIdLivroDev.Name = "txtIdLivroDev";
+            this.txtIdLivroDev.ReadOnly = true;
+            this.txtIdLivroDev.Size = new System.Drawing.Size(100, 20);
+            this.txtIdLivroDev.TabIndex = 1;
             // 
             // label7
             // 
@@ -365,6 +394,44 @@
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.Size = new System.Drawing.Size(577, 379);
             this.dgvDados.TabIndex = 0;
+            // 
+            // txtIdEmp
+            // 
+            this.txtIdEmp.Location = new System.Drawing.Point(189, 93);
+            this.txtIdEmp.Name = "txtIdEmp";
+            this.txtIdEmp.Size = new System.Drawing.Size(100, 20);
+            this.txtIdEmp.TabIndex = 19;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(42, 96);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 13);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Id Emprestimo";
+            // 
+            // chkDev
+            // 
+            this.chkDev.AutoSize = true;
+            this.chkDev.Enabled = false;
+            this.chkDev.Location = new System.Drawing.Point(189, 303);
+            this.chkDev.Name = "chkDev";
+            this.chkDev.Size = new System.Drawing.Size(74, 17);
+            this.chkDev.TabIndex = 21;
+            this.chkDev.Text = "Devolvido";
+            this.chkDev.UseVisualStyleBackColor = true;
+            // 
+            // chkDevolvido
+            // 
+            this.chkDevolvido.AutoSize = true;
+            this.chkDevolvido.Enabled = false;
+            this.chkDevolvido.Location = new System.Drawing.Point(222, 320);
+            this.chkDevolvido.Name = "chkDevolvido";
+            this.chkDevolvido.Size = new System.Drawing.Size(74, 17);
+            this.chkDevolvido.TabIndex = 22;
+            this.chkDevolvido.Text = "Devolvido";
+            this.chkDevolvido.UseVisualStyleBackColor = true;
             // 
             // FrmOperacoes
             // 
@@ -407,7 +474,7 @@
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvDados;
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtIdLivroDev;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnProcurarDev;
         private System.Windows.Forms.Button btnDevolver;
@@ -417,5 +484,11 @@
         private System.Windows.Forms.TextBox txtDataDevPrev;
         private System.Windows.Forms.TextBox txtDataEmpDev;
         private System.Windows.Forms.TextBox txtIdLeitorDev;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtIdEmp;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox chkDev;
+        private System.Windows.Forms.CheckBox chkDevolvido;
     }
 }
