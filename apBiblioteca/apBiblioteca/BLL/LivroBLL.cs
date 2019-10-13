@@ -115,10 +115,9 @@ namespace apBiblioteca.BLL
             {
                 dal = new DAL.LivroDAL();
                 DAL.EmprestimoDAL empDal = new DAL.EmprestimoDAL();
-                if (!empDal.LivroEmprestado(livro.IdLivro))
-                {
-                    dal.DeleteLivro(livro);
-                }                
+                if (empDal.LivroEmprestado(livro.IdLivro)) // se o livro estiver emprestado
+                    throw new Exception("O livro está emprestado!");
+                dal.DeleteLivro(livro);                              
             }
             catch (Exception ex)
             {

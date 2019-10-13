@@ -189,6 +189,7 @@ namespace apBiblioteca.UI
 
         private void btnProcurar_Click_1(object sender, EventArgs e)
         {
+           limparTela();
            int id = Convert.ToInt32(txtIdLivro.Text);
            Livro livro = new Livro(id, "", "", "");
             try
@@ -203,6 +204,13 @@ namespace apBiblioteca.UI
             {
                 MessageBox.Show(" Erro : " + ex.Message.ToString());
             }        
+        }
+
+        private void limparTela()
+        {
+            txtCodigoLivro.Clear();
+            txtAutorLivro.Clear();
+            txtTituloLivro.Clear();
         }
     }
 }

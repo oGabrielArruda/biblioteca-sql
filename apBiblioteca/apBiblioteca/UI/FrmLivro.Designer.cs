@@ -45,21 +45,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dgvLivro = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idLivroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoLivroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tituloLivroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autorLivroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.livroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvLivro = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.livroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -227,78 +219,17 @@
             this.tabPage2.Text = "Lista";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dgvLivro
-            // 
-            this.dgvLivro.AutoGenerateColumns = false;
-            this.dgvLivro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLivro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.idLivroDataGridViewTextBoxColumn,
-            this.codigoLivroDataGridViewTextBoxColumn,
-            this.tituloLivroDataGridViewTextBoxColumn,
-            this.autorLivroDataGridViewTextBoxColumn});
-            this.dgvLivro.DataSource = this.livroBindingSource;
-            this.dgvLivro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLivro.Location = new System.Drawing.Point(3, 3);
-            this.dgvLivro.Name = "dgvLivro";
-            this.dgvLivro.Size = new System.Drawing.Size(404, 280);
-            this.dgvLivro.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "IdLivro";
-            this.Column1.HeaderText = "Identificação";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "CodigoLivro";
-            this.Column2.HeaderText = "Código";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "TituloLivro";
-            this.Column3.HeaderText = "Título";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "AutorLivro";
-            this.Column4.HeaderText = "Autor";
-            this.Column4.Name = "Column4";
-            // 
-            // idLivroDataGridViewTextBoxColumn
-            // 
-            this.idLivroDataGridViewTextBoxColumn.DataPropertyName = "IdLivro";
-            this.idLivroDataGridViewTextBoxColumn.HeaderText = "IdLivro";
-            this.idLivroDataGridViewTextBoxColumn.Name = "idLivroDataGridViewTextBoxColumn";
-            // 
-            // codigoLivroDataGridViewTextBoxColumn
-            // 
-            this.codigoLivroDataGridViewTextBoxColumn.DataPropertyName = "CodigoLivro";
-            this.codigoLivroDataGridViewTextBoxColumn.HeaderText = "CodigoLivro";
-            this.codigoLivroDataGridViewTextBoxColumn.Name = "codigoLivroDataGridViewTextBoxColumn";
-            // 
-            // tituloLivroDataGridViewTextBoxColumn
-            // 
-            this.tituloLivroDataGridViewTextBoxColumn.DataPropertyName = "TituloLivro";
-            this.tituloLivroDataGridViewTextBoxColumn.HeaderText = "TituloLivro";
-            this.tituloLivroDataGridViewTextBoxColumn.Name = "tituloLivroDataGridViewTextBoxColumn";
-            // 
-            // autorLivroDataGridViewTextBoxColumn
-            // 
-            this.autorLivroDataGridViewTextBoxColumn.DataPropertyName = "AutorLivro";
-            this.autorLivroDataGridViewTextBoxColumn.HeaderText = "AutorLivro";
-            this.autorLivroDataGridViewTextBoxColumn.Name = "autorLivroDataGridViewTextBoxColumn";
-            // 
             // livroBindingSource
             // 
             this.livroBindingSource.DataSource = typeof(apBiblioteca.Livro);
+            // 
+            // dgvLivro
+            // 
+            this.dgvLivro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLivro.Location = new System.Drawing.Point(6, 16);
+            this.dgvLivro.Name = "dgvLivro";
+            this.dgvLivro.Size = new System.Drawing.Size(398, 264);
+            this.dgvLivro.TabIndex = 0;
             // 
             // FrmLivro
             // 
@@ -312,8 +243,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.livroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -335,15 +266,7 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnProcurar;
-        private System.Windows.Forms.DataGridView dgvLivro;
         private System.Windows.Forms.BindingSource livroBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idLivroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoLivroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tituloLivroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn autorLivroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgvLivro;
     }
 }

@@ -77,8 +77,9 @@ namespace apBiblioteca.BLL
             try
             {
                 dal = new DAL.EmprestimoDAL();
-                if(!dal.LivroEmprestado(emprestimo.IdLivro) && !dal.LeitorCheio(emprestimo.IdLeitor))
-                    dal.InsertEmprestimo(emprestimo);
+                if (dal.LeitorCheio(emprestimo.IdLeitor)) // se o leitor já tem 5 livros
+                    throw new Exception("Leitor já tem número máximo de livros!");
+                dal.InsertEmprestimo(emprestimo);
             }
             catch(Exception ex)
             {

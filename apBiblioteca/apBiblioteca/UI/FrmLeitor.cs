@@ -36,7 +36,7 @@ namespace apBiblioteca.UI
         {
             try
             {
-                LeitorBLL leitorBLL = new LeitorBLL();
+                 LeitorBLL leitorBLL = new LeitorBLL();
                  dgvLeitor.DataSource = leitorBLL.SelecionarLeitores();
             }
             catch(Exception ex)
@@ -74,6 +74,7 @@ namespace apBiblioteca.UI
 
         private void btnProcurarLeitor_Click(object sender, EventArgs e)
         {
+            limparTela();
             int id = int.Parse(txtIdLeitor.Text);
             Leitor leitor = new Leitor("", "", "", "");
             try
@@ -89,6 +90,14 @@ namespace apBiblioteca.UI
             {
                 MessageBox.Show("Erro: " + ex.Message.ToString());
             }
+        }
+
+        private void limparTela()
+        {
+            txtEmailLeitor.Clear();
+            txtEnderecoLeitor.Clear();
+            txtNomeLeitor.Clear();
+            txtTelLeitor.Clear();
         }
     }
 }
