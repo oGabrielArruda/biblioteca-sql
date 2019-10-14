@@ -21,6 +21,14 @@ namespace apBiblioteca
         private string emailLeitor;
         private string enderecoLeitor;
 
+        public Leitor(int id,string nome, string tel, string email, string endereco)
+        {
+            IdLeitor = id;
+            NomeLeitor = nome;
+            TelefoneLeitor = tel;
+            EmailLeitor = email;
+            EnderecoLeitor = endereco;
+        }
         public Leitor(string nome, string tel, string email, string endereco)
         {
             NomeLeitor = nome;

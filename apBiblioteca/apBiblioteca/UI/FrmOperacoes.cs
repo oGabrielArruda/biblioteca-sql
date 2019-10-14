@@ -145,7 +145,7 @@ namespace apBiblioteca.UI
                 txtDataEmpDev.Text = emp.DataEmprestimo.ToString();
 
                 if (emp.DataDevolucaoReal != Convert.ToDateTime("01/01/1900"))
-                    chkDev.Checked = true;
+                    chkDevolvido.Checked = true;
                 
             }
             catch(Exception ex)

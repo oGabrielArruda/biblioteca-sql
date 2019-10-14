@@ -190,11 +190,13 @@ namespace apBiblioteca.UI
         private void btnProcurar_Click_1(object sender, EventArgs e)
         {
            limparTela();
-           int id = Convert.ToInt32(txtIdLivro.Text);
-           Livro livro = new Livro(id, "", "", "");
             try
             {
-                 BLL.LivroBLL bll = new LivroBLL();
+                if (txtIdLivro.Text.Trim() == "")
+                    throw new Exception("Id vazio");
+                int id = Convert.ToInt32(txtIdLivro.Text);
+                Livro livro = new Livro(id, "", "", "");
+                BLL.LivroBLL bll = new LivroBLL();
                  livro = bll.SelecionarLivroPorId(id);
                  txtCodigoLivro.Text = livro.CodigoLivro;
                  txtTituloLivro.Text = livro.TituloLivro;

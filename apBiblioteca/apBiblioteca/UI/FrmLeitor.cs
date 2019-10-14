@@ -25,6 +25,7 @@ namespace apBiblioteca.UI
             {
                 LeitorBLL leitorBLL = new LeitorBLL();
                 leitorBLL.IncluirLeitor(leitor);
+                limparTela();
             }
             catch(Exception ex)
             {
@@ -47,7 +48,7 @@ namespace apBiblioteca.UI
 
         private void btnAlterarLeitor_Click(object sender, EventArgs e)
         {
-            Leitor leitor = new Leitor(txtNomeLeitor.Text, txtTelLeitor.Text, txtEmailLeitor.Text, txtEnderecoLeitor.Text);
+            Leitor leitor = new Leitor(int.Parse(txtIdLeitor.Text),txtNomeLeitor.Text, txtTelLeitor.Text, txtEmailLeitor.Text, txtEnderecoLeitor.Text);
             try
             {
                 LeitorBLL leitorBLL = new LeitorBLL();

@@ -155,7 +155,6 @@ namespace apBiblioteca.DAL
                 cmd.Parameters.AddWithValue("@idLeitor", qualEmprestimo.IdLeitor);
                 cmd.Parameters.AddWithValue("@dataEmprestimo", qualEmprestimo.DataEmprestimo);
                 cmd.Parameters.AddWithValue("@dataDevolucaoPrevista", qualEmprestimo.DataDevolucaoPrevista);
-                cmd.Parameters.AddWithValue("@dataDevolucaoPrevista", qualEmprestimo.DataDevolucaoReal);
                 conexao.Open();
                 cmd.ExecuteNonQuery();
             }

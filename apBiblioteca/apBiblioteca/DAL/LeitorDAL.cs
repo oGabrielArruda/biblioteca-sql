@@ -195,18 +195,18 @@ namespace apBiblioteca.DAL
             {
                 String sql = "update BibLeitor set " +
                     "nomeLeitor = @nome," +
-                    "telefoneLeitor = @tel " +
-                    "emailLeitor = @email" +
-                    "enderecoLeitor = @endereco" + 
-                    "where idLivro = @id";
+                    "telefoneLeitor = @tel," +
+                    "emailLeitor = @email," +
+                    "enderecoLeitor = @endereco " + 
+                    "where idLeitor = @id";
 
                 conexao = new SqlConnection(_conexaoSQLServer);
                 SqlCommand cmd = new SqlCommand(sql, conexao);
-                cmd.Parameters.AddWithValue("@id", qualLeitor.IdLeitor);
                 cmd.Parameters.AddWithValue("@nome", qualLeitor.NomeLeitor);
                 cmd.Parameters.AddWithValue("@tel", qualLeitor.TelefoneLeitor);
                 cmd.Parameters.AddWithValue("@email", qualLeitor.EmailLeitor);
                 cmd.Parameters.AddWithValue("@endereco", qualLeitor.EnderecoLeitor);
+                cmd.Parameters.AddWithValue("@id", qualLeitor.IdLeitor);
                 conexao.Open();
                 cmd.ExecuteNonQuery();
             }
